@@ -1,0 +1,14 @@
+<!-- create_reservation.html -->
+<form method="POST" action="{% url 'create-reservation' %}">
+    {% csrf_token %}
+    <input type="hidden" name="user_id" value="{{ user_id }}">
+    <input type="hidden" name="parking_spot_id" value="{{ parking_spot_id }}">
+    <label for="hours">Number of Hours:</label>
+    <input type="number" name="hours" required>
+    <p>Total Price: {{ total_price }}</p>
+    <button type="submit">Reserve</button>
+  </form>
+  {% if error_message %}
+    <p>{{ error_message }}</p>
+  {% endif %}
+  

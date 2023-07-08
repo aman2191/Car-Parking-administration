@@ -1,0 +1,4 @@
+<!-- parking_spots.html -->
+{% for parking_spot in parking_spots %}
+  <p>{{ parking_spot.name }} - Lat: {{ parking_spot.latitude }}, Long: {{ parking_spot.longitude }}</p>
+{% endfor %}

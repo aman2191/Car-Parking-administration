@@ -1,0 +1,17 @@
+<!-- get_reservations.html -->
+<h1>Existing Reservations</h1>
+{% if reservations %}
+  <ul>
+    {% for reservation in reservations %}
+      <li>
+        Reservation ID: {{ reservation.id }}<br>
+        User: {{ reservation.user }}<br>
+        Parking Spot: {{ reservation.parking_spot }}<br>
+        Hours: {{ reservation.hours }}<br>
+        Total Price: {{ reservation.total_price }}<br>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No reservations found.</p>
+{% endif %}

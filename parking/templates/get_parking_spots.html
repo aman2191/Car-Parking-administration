@@ -1,0 +1,15 @@
+<!-- get_parking_spots.html -->
+<h1>Available Parking Spots</h1>
+{% if parking_spots %}
+  <ul>
+    {% for parking_spot in parking_spots %}
+      <li>
+        Name: {{ parking_spot.name }}<br>
+        Latitude: {{ parking_spot.latitude }}<br>
+        Longitude: {{ parking_spot.longitude }}<br>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No parking spots available.</p>
+{% endif %}
